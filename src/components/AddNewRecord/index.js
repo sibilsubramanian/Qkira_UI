@@ -1,5 +1,6 @@
 import { Form, Input } from "reactstrap";
 import React, { useEffect, useState, useContext } from "react";
+import axios from "axios";
 
 import Modal from "../Modal";
 import { AppContext } from "../../store/AppContext";
@@ -129,8 +130,6 @@ const AddNewRecord = (props) => {
     }
     
     { // Video block
-      let header = {...signedDetails.response.fields};
-      
       formData.append("bucket", signedDetails.response.fields.bucket);
       formData.append("X-Amz-Algorithm", signedDetails.response.fields["X-Amz-Algorithm"]);
       formData.append("X-Amz-Credential", signedDetails.response.fields["X-Amz-Credential"]);
@@ -141,7 +140,7 @@ const AddNewRecord = (props) => {
       formData.append("Content-Type", signedDetails.response.fields["Content-Type"])
       formData.append("success_action_status", signedDetails.response.fields.success_action_status);
       formData.append("file", uploadedFile);
-      let response = await uploadVideoToS3(signedDetails.response.url, header, formData);
+      let response = await axios.post(signedDetails.response.url, formData);
       if (response.error) {
         setProgress(false);
         return;
@@ -149,7 +148,7 @@ const AddNewRecord = (props) => {
     }
 
     { // Thumbnail block
-      let header = {...tumbnailDetails.response.fields};
+      
 
       const base64Response = await fetch(thumbnail);
       const blob = await base64Response.blob();
@@ -164,7 +163,7 @@ const AddNewRecord = (props) => {
       thumbnailData.append("Content-Type", tumbnailDetails.response.fields["Content-Type"])
       thumbnailData.append("success_action_status", tumbnailDetails.response.fields.success_action_status);
       thumbnailData.append("file", blob);
-      let response = await uploadVideoToS3(tumbnailDetails.response.url, header, thumbnailData);
+      let response = await axios.post(tumbnailDetails.response.url,thumbnailData);
       if (response.error) {
         setProgress(false);
         return;

@@ -1,7 +1,8 @@
 import axios from "axios";
 import { getCookie, setCookie } from "./cookie";
 
-const BASE_URL = "http://ec2-3-223-141-19.compute-1.amazonaws.com/api/"; //TODO
+const BASE_URL = "https://data.qkira.com/api/"; //TODO
+
 
 export const axiosInstance = axios.create({
   baseURL: BASE_URL,
