@@ -1,0 +1,48 @@
+.c-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+
+    span {
+        margin: auto;
+        margin-right: 0;
+        font-weight: 500;
+        font-size: 0.98rem;
+        margin-left: 0.25rem;
+    }
+
+    .c-name {
+        margin: 0.25rem;
+
+        .c-title {
+            margin-right: 0.25rem;
+        }
+    }
+
+    .c-name.active {
+        background: #099debdb !important;
+        border-color: #00b4d8 !important;
+    }
+
+    .c-name,
+    .dropdown .dropdown-toggle.btn {
+        padding: 0.15rem 0.45rem;
+        cursor: pointer;
+        border: 1px solid rgba(91, 98, 104, 0.6117647059);
+        background: rgba(91, 98, 104, 0.6117647059);
+        border-radius: 4px;
+        color: white;
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .dropdown {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.dropdown-menu.show .dropdown-item {
+    font-size: 0.85rem;
+}

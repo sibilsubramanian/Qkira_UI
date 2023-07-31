@@ -1,0 +1,222 @@
+.back-home {
+    display: flex;
+    margin: 1.5rem;
+    cursor: pointer;
+    color: #5a6269;
+    position: absolute;
+    align-items: center;
+
+    svg {
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 1rem;
+        font-weight: 500;
+        padding-left: 0.5rem;
+    }
+}
+
+.auth-container {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: black;
+    width: 25rem;
+    height: fit-content;
+
+    .logo  {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        margin-bottom: 2rem;
+
+        img {
+            width: 9rem;
+            margin-top: 4rem;        
+        }
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .login {
+        padding: 2rem 2.5rem;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
+        h3 {
+            padding-bottom: 1.5rem;
+        }
+        
+        form input,
+        form input:focus {
+            font-size: 0.85rem;
+            color: black !important;
+            margin-bottom: 1rem !important;
+            background-color: #e8f0fe !important;
+            border-color: #d6e1f5;
+        }
+
+        form {
+            input,
+            input:focus {
+                color: black !important;
+                margin-bottom: 1rem !important;
+                background-color: #e8f0fe !important;
+            }
+
+            .forgot {
+                padding-bottom: 0.65rem !important;
+                font-size: 0.85rem;
+                text-align: right;
+                color: blue;
+            }
+
+            .forgot:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            .policy {
+                color: grey;
+                font-size: 0.85rem;
+                margin-bottom: 1rem;
+            }
+
+            .help {
+                color: blue;
+                font-size: 0.85rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            .invalid-tooltip {
+                left: 0;
+                width: 100%;
+                text-align: center;
+                margin-top: 0.35rem;
+            }
+
+            button,
+            button:disabled {
+                width: 100%;
+                border: none;
+                color: #fff;
+                font-size: 0.9rem;
+                background: #5a6269;
+            }
+        }
+    }
+
+    .register {
+        color: grey;
+        text-align: center;
+        padding: 1rem 2.5rem;
+
+        button {
+            width: 100%;
+            border: none;
+            color: #fff;
+            margin-top: 1rem;
+            font-weight: 300;
+            font-size: 0.9rem;
+            background: #5a6269;
+        }
+    }
+}
+
+.modal .modal-dialog .modal-content .modal-body {
+    .content {
+        padding-bottom: 0.65rem;
+    }
+    
+    .reset {
+        padding-bottom: 0.65rem;
+    }
+
+    input {
+        margin-bottom: 0.65rem;
+    }
+
+    .verification-code {
+        margin-bottom: 0 !important;
+    }
+
+    .resend-code {
+        float: right;
+        cursor: pointer;
+        color: #0e6efd;
+        font-size: .78rem;
+        margin: 0.25rem 0 0.75rem;
+        text-decoration: underline;
+    }
+
+    .resend-code:hover {
+        color: #0a58ca;
+    }
+}
+
+.modal .forgot-password-modal {
+    top: 20%;
+
+    .modal-content {
+        .modal-header {
+            width: 100%;
+            border: none;
+            display: block;
+            padding-bottom: 1.5rem;
+
+            .modal-title .custom-title {
+                display: flex;
+                font-size: 1.25rem;
+                align-items: center;
+                padding-top: 0.5rem;
+                flex-direction: column;
+
+                .message {
+                    color: grey;
+                    font-size: 0.85rem;
+                }
+
+                svg {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        .modal-body {
+            padding-top: 0;
+
+            #email {
+                margin-bottom: 1.5rem;
+            }
+
+            .reset {
+                padding-top: 1rem;
+                border-top: 1px solid #80808040;
+            }
+
+            input {
+                font-size: 0.85rem;
+                background: #d6e1f559;
+                border-color: #d6e1f5;
+            }
+        }
+
+        .modal-footer {
+            .btn {
+                font-size: 0.75rem;
+                border-radius: 6px;
+                padding: 0.45rem 0.98rem;
+            }
+        }
+    }
+}

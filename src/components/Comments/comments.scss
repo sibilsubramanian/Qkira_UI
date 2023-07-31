@@ -1,0 +1,30 @@
+.comments {
+  padding-bottom: 3rem;
+}
+
+.comments-title {
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding-top: 1.5rem;
+}
+
+.loadmore {
+  float: right;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  font-size: 0.788rem;
+  margin-top: 0.25rem;
+}
+
+.loadmore:hover {
+  color: rgba(9, 157, 235, 0.8588235294);
+}
+
+.comments-container {
+  height: 20vh;
+  overflow: auto;
+  padding-left: 0.5rem;
+  border-radius: 0.25rem;
+  background: rgba(127, 127, 127, 0.04);
+}

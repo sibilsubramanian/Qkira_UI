@@ -1,0 +1,29 @@
+.session-expiry-modal {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-header {
+  border-bottom: hidden !important;
+}
+
+.modal-body {
+  padding-top: 0 !important;
+  padding-bottom: 3rem !important;
+}
+
+.error {
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  .message {
+    padding-top: 0.5rem;
+  }
+  svg {
+    font-size: 4rem;
+  }
+}

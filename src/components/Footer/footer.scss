@@ -1,0 +1,38 @@
+.footer-content {
+    color: #fff;
+    display: grid;
+    height: 15rem;
+    padding: 2rem 1rem;
+    background: black;
+    grid-template-columns: auto auto auto;
+    box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5);
+
+    .grid {
+        margin: 0 2.5rem;
+
+        h6 {
+            color: #dee2e6;
+        }
+
+        img {
+            width: 10rem;
+            cursor: pointer;
+        }
+
+        .location,
+        .phone,
+        .email {
+            color: grey;
+            font-size: 0.85rem;
+            padding-bottom: 0.5rem;
+            svg {
+                margin-right: 0.85rem;
+            }
+        }
+
+        .app-description {
+            color: grey;
+            font-size: 0.786rem;
+        }
+    }
+}

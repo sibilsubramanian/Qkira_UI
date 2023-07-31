@@ -1,0 +1,121 @@
+.navbar {
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 4.5rem;
+    position: fixed !important;
+    padding: 0 2.5rem !important;
+    background-image: linear-gradient(to right, #434343fa 0%, black 100%);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    .container-fluid .navbar-brand {
+        display: flex;
+        color: #ffff;
+        align-items: end;
+        width: 6rem !important;
+
+        img {
+            width: 7.45rem;
+            cursor: pointer;
+        }
+    }
+
+    .container-fluid .me-auto.navbar-nav {
+        flex-direction: row !important;
+        margin-right: unset !important;
+        display: flex;
+        width: calc(100% - 8rem);
+        justify-content: space-between;
+
+        .navlist-container {
+            display: flex;
+            flex-direction: row;
+            
+            .nav-item {
+                font-size: 0.85rem;
+                padding-left: 1rem;
+
+                .nav-link a {
+                    color: #ffff;
+                    padding: 0.4rem;
+                    text-decoration: none;
+
+                    svg {
+                        font-size: 1.25rem;
+                        margin-right: 0.25rem;
+                        margin-bottom: 0.16rem;
+                    }
+                }
+            }
+
+            .logged-in.nav-item {
+                position: absolute;
+                right: 6.45rem !important;
+            }
+
+            .active.nav-link {
+                padding-bottom: 0.2rem;
+            }
+        }
+
+        .user-dropdown.dropdown {
+            border-radius: 50%;
+            width: 2.5rem !important;
+            height: 2.5rem !important;
+
+            .btn.btn-secondary {
+                width: 2.5rem;
+                height: 2.5rem;
+                padding: 0rem !important;
+                border-radius: 51% !important;  
+                
+                #avatar-element {
+                    svg {
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .dropdown-menu.show {
+                width: 15rem !important;
+                .user-details {
+                    display: flex;
+                    margin: 0 0.5rem;
+                    align-items: center;
+                    flex-direction: column;
+                    border-bottom: 1px solid #80808042;
+
+                    #avatar-element-drop-down {
+                        width: 5rem;
+                        height: 5rem;
+                        margin: 1.5rem 0 0;
+
+                        svg {
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .email {
+                        font-weight: 500;
+                        padding: 0.4rem 0;
+                        font-size: 0.85rem;
+                    }
+                }
+
+                button a {
+                    color: black;
+                    font-weight: 500;
+                    font-size: 0.85rem;
+                    svg {
+                        color: black;
+                        margin-right: 0.58rem;
+                    }
+                }
+                .dropdown-item {
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

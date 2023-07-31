@@ -1,0 +1,95 @@
+.modal {
+    .modal-dialog.add-new-modal {
+        width: 80vw;
+        margin-top: 4%;
+        overflow: auto;
+        min-width: 56rem;
+        max-width: 70rem;
+
+        .modal-content {
+            height: fit-content;
+
+            .modal-header {
+                border: none;
+                padding: 1.5rem;
+            }
+
+            .modal-body {
+                padding: 1.85rem;
+                background: #7f7f7f0a;
+
+                .add-new {
+                    input, textarea, select {
+                        margin-bottom: 1rem;
+                    }
+
+                    textarea {
+                        height: 15rem;
+                    }
+                }
+            }
+
+            .modal-footer {
+                .btn {
+                    font-size: 0.75rem;
+                    border-radius: 4px;
+                    padding: 0.45rem 0.98rem;
+                }
+            }
+        }
+    }
+
+    .modal-dialog.snap-for-thumbnail  {
+        width: 80vw;
+        margin-top: 4%;
+        overflow: auto;
+        min-width: 56rem;
+        max-width: 70rem;
+
+        .modal-content {
+            height: fit-content;
+
+            .modal-header {
+                border: none;
+                padding: 1.5rem;
+            }
+
+            .modal-body {
+                display: flex;
+                overflow: auto;
+                padding: 1.85rem 2.5rem;
+                max-height: 70vh;
+                background: #7f7f7f0a;
+                justify-content: space-between;
+
+                video {
+                    width: 40%;
+                }
+
+                #snapshot {
+                    width: 40%;
+                    display: flex;
+                    align-items: start;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+
+                    .help {
+                        color: grey;
+                        font-size: 0.75rem;
+                        padding-bottom: 1rem;
+                    }
+
+                    img {
+                        border: 1px solid #80808080;
+                    }
+                }
+            }
+
+            .modal-footer .btn {
+                font-size: 0.75rem;
+                border-radius: 4px;
+                padding: 0.45rem 0.98rem;
+            }
+        }
+    }
+}

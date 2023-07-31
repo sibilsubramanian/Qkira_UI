@@ -1,0 +1,39 @@
+.new-comments {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        padding-top: 1.5rem;
+
+        #comments-author-avator {
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-right: 1rem;
+
+            svg {
+                border-radius: 50%;
+            }
+        }
+
+        textarea {
+            font-size: 0.85rem;
+        }
+    }
+
+    .actions {
+        display: flow-root;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid #80808030;
+
+        .add-action {
+            margin-left: 0.5rem !important;
+        }
+        .add-action,
+        .cancel-action {
+            float: right;
+            border: none;
+            margin: 0.5rem 0;
+            font-size: 0.85rem;
+            background: #0d6efd;
+            padding: 0.25rem 0.95rem;
+        }
+    }

@@ -1,0 +1,27 @@
+.related-videos {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .video-item {
+    display: flex;
+    margin-bottom: 8px;
+    cursor: pointer;
+
+    .video-text-details {
+      margin-left: 12px;
+
+      .video-text {
+        font-size: 0.75rem;
+        font-weight: 400;
+        margin-bottom: 0;
+        color: grey;
+      }
+    }
+  }
+}

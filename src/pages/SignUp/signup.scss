@@ -1,0 +1,97 @@
+.auth-container {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: black;
+  width: 30rem;
+  height: fit-content;
+
+  .logo {
+    img {
+      width: 9rem;
+      margin-top: 4rem;        
+    }
+  }
+
+  .signup {
+    padding: 2rem 2.5rem !important;
+    border: 1px solid #fff !important;
+    border-radius: 8px !important;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    background: #fff;
+  }
+
+  h2,
+  h3 {
+    text-align: center !important;
+  }
+
+  h3 {
+    padding-bottom: 1rem;
+  }
+
+  input {
+    font-size: 0.85rem;
+    color: black !important;
+    margin-bottom: 1rem !important;
+    background-color: #e8f0fe !important;
+  }
+
+  .verification-code {
+    margin-bottom: 0 !important;
+  }
+
+  .resend-code {
+    float: right;
+    cursor: pointer;
+    color: #0e6efd;
+    font-size: 0.78rem;
+    margin: 0.25rem 0 0.75rem;
+    text-decoration: underline;
+  }
+
+  .resend-code:hover {
+    color: #0a58ca;
+  }
+
+  .form-check-input {
+    margin-top: 0.42rem;
+    background-color: gray !important;
+  }
+
+  button {
+    width: 100%;
+    border: none;
+    color: #fff;
+    font-size: 0.9rem;
+    background: #5a6269;
+    text-align: center !important;
+  }
+
+  .inline {
+    padding-left: 2%;
+    font-size: 0.85rem;
+    display: inline-block;
+  }
+
+  input[type='checkbox'] {
+    cursor: pointer;
+  }
+
+  .already {
+    text-align: center !important;
+    padding-top: 1rem;
+  }
+
+  .loader {
+    .m-5.spinner-border {
+      margin: 0 !important;
+      left: 50%;
+      position: relative;
+    }
+  }
+}

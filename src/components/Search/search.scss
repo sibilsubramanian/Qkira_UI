@@ -1,0 +1,28 @@
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 70% !important;
+    border: 1px solid white;
+    min-width: 20rem !important;
+    border-radius: 6px !important;
+
+    svg {
+        color: grey;
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+    }
+
+    input {
+        border: none;
+        color: grey;
+        background: transparent;
+        padding: .375rem .5rem;
+    }
+
+    input:focus {
+        color: grey;
+        box-shadow: none;
+        background: transparent;
+        border: none !important;
+    }
+}

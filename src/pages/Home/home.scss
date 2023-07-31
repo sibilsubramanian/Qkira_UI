@@ -1,0 +1,92 @@
+.home.container {
+    max-width: 95vw !important;
+    margin-top: 2.5rem !important;
+
+    .category {
+        padding: 0 1rem;
+        margin-bottom: 2.5rem;
+        h6 {
+            color: black;
+            margin-bottom: 0;
+        }
+        .category-list .slick-slider {
+            .slick-next:before, .slick-prev:before {
+                color: #0d6efd;
+            }
+            .slick-list {
+                padding: 0.85rem 1rem 2rem 1rem;
+            }
+        }
+        .category-list .slick-slider .slick-list .slick-track {
+            .slick-slide {
+                cursor: pointer;
+                width: 18rem !important;
+                margin-right: 1rem !important;
+
+                div .load-more {
+                    border: none;
+                    margin-top: 50%;
+                    margin: 54% 2rem;
+                    border-radius: 4px;
+                    display: inline-block;
+                    background: #4b90f9;
+                    width: fit-content !important;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+
+                    svg {
+                        color: white;
+                        font-size: 1.25rem;
+                        margin-left: 0.65rem;
+                    }
+
+                    .btn {
+                        border: none;
+                        font-size: 0.85rem;
+                        background: #4b90f9;
+                        padding-left: 0.45rem;
+                    }
+
+                }
+
+                div .card  {
+                    border: 1px solid white;
+                    width: 100%;
+                    padding: 1rem;
+                    display: inline-block;
+                    border-radius: 6px !important;
+
+                    img {
+                        width: inherit;
+                        border-radius: 6px;
+                        height: 16rem !important;
+                    }
+                    .card-body {
+                        cursor: pointer;
+                        color: black !important;
+                        padding: 0.65rem 0.5rem 0 0 !important;
+
+                        .card-title {
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            margin-bottom: 0 !important;
+                            margin-top: 0.75rem;
+                            font-size: 0.95rem;
+                            color: #212529 !important;
+                        }
+                    }
+                }
+
+                .no-record {
+                    color: grey;
+                    background: transparent;
+                    font-size: 1rem;
+                }
+
+                div .card:hover {
+                    box-shadow: #adb5bd 0px 13px 27px -5px, #0dcaf0 0px 8px 16px -8px
+                }
+            }
+        }
+    }
+}
