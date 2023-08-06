@@ -8,6 +8,7 @@ import { TiWarningOutline } from "react-icons/ti";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
+import { useNavigate } from 'react-router'
 
 import Comments from "../Comments";
 import RelatedVideos from "../RelatedVideos";
@@ -28,6 +29,7 @@ const DetailsModal = (props) => {
   const [isUserLiked, setUserLiked] = useState(false);
   const [isLiked, setLiked] = useState(false);
   const { userDetails } = useContext(AppContext);
+  const navigate = useNavigate();
 
   const generateAvatar = (userName) => {
     let avatar = createAvatar(initials, {
@@ -65,22 +67,26 @@ const DetailsModal = (props) => {
     }
   }, [props.id, userDetails]);
 
-  const onDeleteHandler = () => {
-    let paylaod = {
+  const onDeleteHandler = async () => {
+    let payload = {
       category: props.category,
       key: props.id,
     };
-    deleteRecord(paylaod);
+    let response = await deleteRecord(payload);
+    if(response) {
+      navigate(0);
+      props.onClose();
+    }
   };
 
   const onLike = (isLike) => {
     if (userDetails) {
-      let paylaod = {
+      let payload = {
         key: props.id,
         action: isLike,
       };
       setLiked(isLike);
-      likeAction(paylaod);
+      likeAction(payload);
     }
   };
 
