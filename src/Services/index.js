@@ -294,7 +294,8 @@ export const deleteCategory = async(paylaod) => {
 export const deleteRecord = async(payload) => {
     try {
         const response = await axiosInstance.delete(URL.DELETE_RECORD, {...config, data: payload});
-        toast.success("Record got deleted Successfullt");
+        toast.success("Record got deleted Successfully");
+        return response.data;
     } catch (e) {
         toast.error(e.response.data.message);
         console.info(e);
