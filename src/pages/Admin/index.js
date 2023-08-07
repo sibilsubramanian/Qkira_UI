@@ -13,6 +13,7 @@ import { getUnpublishedVideos, approveRecord, rejectRecord, createCategories, de
 import './admin.scss';
 
 const Admin = () => {
+    const { userDetails } = useContext(AppContext);
     const [isAccept, setAcceptStatus] = useState(false);
     const [isReject, setRejectStatus] = useState(false);
     const [isConfirmationActive, setConfirmationStatus] = useState(false);
@@ -205,7 +206,7 @@ const Admin = () => {
                     onAccept={onAcceptClick}
                     onReject={onRejectClick}
                     category={selectedCategory}
-                    isDeletable={false}
+                    isDeletable={userDetails?.role === "ADMIN"}
                     />}
                 <CategoryList active={selectedCategory} onCategorySelection={setSelectedCategory} />
                 <div className="content-container">
