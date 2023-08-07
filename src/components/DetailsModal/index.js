@@ -15,7 +15,8 @@ import RelatedVideos from "../RelatedVideos";
 import { AppContext } from "../../store/AppContext";
 import {
   getVideo,
-  deleteRecord,
+  deleteVideoByAdmin,
+  deleteVideoByUser,
   getUserMetaVideoDetails,
   likeAction,
 } from "../../Services";
@@ -72,7 +73,12 @@ const DetailsModal = (props) => {
       category: props.category,
       key: props.id,
     };
-    let response = await deleteRecord(payload);
+    let response = '';
+    if(userDetails?.role === "ADMIN"){
+      response = await deleteVideoByAdmin(payload);
+    } else if(userDetails?.role === "USER"){
+      response = await deleteVideoByUser(payload);
+    }
     if(response) {
       navigate(0);
       props.onClose();
