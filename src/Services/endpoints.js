@@ -27,6 +27,8 @@ export const DELETE_CATEGORIES = 'control/deleteCategory';
 export const MY_PUBLISHED_VIDEOS = 'video/myVideosPublished';
 export const MY_UNPUBLISHED_VIDEOS = 'video/myVideosUnPublished';
 
+export const DELETE_BY_USER_RECORD = 'video/myVideos/deleteVideo';
+
 export const DELETE_RECORD = 'control/removeVideo';
 
 export const ADD_COMMENTS = 'meta/addComment';
