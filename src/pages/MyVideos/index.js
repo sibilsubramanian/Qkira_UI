@@ -60,7 +60,7 @@ const MyVideos = () => {
             onClose={() => setSelectedId(null)}
             isApproval={false}
             category={selectedCategory}
-            isDeletable={userDetails?.role === "ADMIN"}
+            isDeletable={userDetails?.role === "USER" || userDetails?.role === "ADMIN"}
             />}
         <Nav tabs>
             <NavItem>
