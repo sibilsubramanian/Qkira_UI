@@ -1,4 +1,4 @@
-import { AiFillLike } from "react-icons/ai";
+import { AiFillEye, AiFillLike, AiOutlineEye } from "react-icons/ai";
 import { useEffect, useState, useContext } from "react";
 import { createAvatar } from "@dicebear/core";
 import { HiCheckCircle } from "react-icons/hi";
@@ -19,6 +19,7 @@ import {
   deleteVideoByUser,
   getUserMetaVideoDetails,
   likeAction,
+  updateViewCount,
 } from "../../Services";
 
 import "./detailsModal.scss";
@@ -30,6 +31,7 @@ const DetailsModal = (props) => {
   const [isUserLiked, setUserLiked] = useState(false);
   const [isLiked, setLiked] = useState(false);
   const { userDetails } = useContext(AppContext);
+  const [viewCount, setViewCount] = useState(0);
   const navigate = useNavigate();
 
   const generateAvatar = (userName) => {
@@ -108,6 +110,21 @@ const DetailsModal = (props) => {
     return data.likes;
   };
 
+  useEffect(() => {
+    if(data?.viewCount) {
+      setViewCount(data.viewCount);
+    }
+  }, [data?.viewCount])
+
+  async function updateViews(key) {
+    let response = await updateViewCount(key);
+    if (response?.error) {
+      setError(true);
+    } else {
+      setViewCount(response.viewCount);
+    }
+  }
+
   return (
     <Modal isOpen={true} className="details-modal">
       <ModalHeader toggle={() => props.onClose()} />
@@ -116,7 +133,9 @@ const DetailsModal = (props) => {
           <main className="video-details">
             <section key={data.videoUrl} className="video-container">
               {data.videoUrl && (
-                <video controls>
+                <video controls onPlay={() => {
+                  updateViews(data.key);
+                }}>
                   <source src={data.videoUrl} type="video/mp4" />
                 </video>
               )}
@@ -133,13 +152,19 @@ const DetailsModal = (props) => {
                   </div>
                 </div>
                 {props.isApproval === false && (
-                  <div className="likes">
-                    {isLiked ? (
-                      <AiFillLike onClick={() => onLike(false)} />
-                    ) : (
-                      <AiOutlineLike onClick={() => onLike(true)} />
-                    )}
-                    <div className="likes-count">{getLikesCount()}</div>
+                  <div className="video-analytics">
+                    <div className="icon">
+                      {isLiked ? (
+                        <AiFillLike onClick={() => onLike(false)} />
+                        ) : (
+                        <AiOutlineLike onClick={() => onLike(true)} />
+                      )}
+                      <div className="likes-count">{getLikesCount()}</div>
+                    </div>
+                    <div className="icon">
+                      {viewCount ? <AiFillEye /> : <AiOutlineEye />}
+                      <div className="view-count">{viewCount}</div>
+                    </div>
                   </div>
                 )}
                 {props?.isApproval === true && (

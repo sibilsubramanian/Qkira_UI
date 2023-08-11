@@ -373,3 +373,14 @@ export const resendVerificationCode = async(email) => {
         console.info(e);
     } 
 }
+
+export const updateViewCount = async(key) => {
+    try {
+        const url = `${URL.UPDATE_VIEWS}/${key}`;
+        const response = await axiosInstance.put(url, config);
+        return response.data;
+    } catch (e) {
+        console.info(e);
+        return null;
+    }
+}

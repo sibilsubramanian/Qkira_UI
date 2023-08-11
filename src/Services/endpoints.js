@@ -36,3 +36,5 @@ export const FETCH_COMMENTS = 'meta/getComments';
 export const GET_USER_META_VIDEO = 'meta/getUserMetaVideo';
 export const LIKE_INTERACTION = 'meta/likeInteraction';
 export const SEARCH_VIDEO = 'meta/search';
+
+export const UPDATE_VIEWS = 'meta/videoView';

@@ -51,6 +51,7 @@
           .category-container {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             padding-top: 8px;
             padding-bottom: 8px;
             .author-details {
@@ -77,18 +78,25 @@
               }
             }
 
-            .likes {
+            .video-analytics { 
               display: flex;
-              cursor: pointer;
-              svg {
-                color: green;
-                font-size: 1.25rem;
-                margin-top: 0.5rem;
-              }
-
-              .likes-count {
-                margin-top: 0.4rem;
-                padding-left: 0.5rem;
+              .icon {
+                display: flex;
+                cursor: pointer;
+                svg {
+                  color: green;
+                  font-size: 1.25rem;
+                  margin-top: 0.5rem;
+                }
+                .likes-count {
+                  margin-top: 0.4rem;
+                  padding-left: 0.25rem;
+                  margin-right: 0.5rem;
+                }
+                .view-count {
+                  margin-top: 0.4rem;
+                  padding-left: 0.25rem;
+                }
               }
             }
           }
@@ -99,11 +107,9 @@
           }
 
           .review {
-            // display: flex;
-            margin-top: 1rem;
-            padding-top: 1.25rem;
-            // justify-content: end;
-            border-top: 1px solid rgba(128, 128, 128, 0.1882352941);
+            display: flex;
+            justify-content: end;
+            height: 1.5rem;
 
             button {
               display: flex;
@@ -121,6 +127,7 @@
               color: green;
               border-color: green;
               padding: 0.15rem 0.5rem;
+              margin-right: .25rem;;
             }
 
             .reject {
